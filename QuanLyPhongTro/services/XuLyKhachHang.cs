@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyPhongTro.services
 {
+    [Serializable]
     class XuLyKhachHang : IServices<KhachHang>
     {
         public void create(KhachHang entity)

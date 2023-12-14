@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyPhongTro.models
 {
+    [Serializable]
     class KhachHang
     {
         private string m_makhach;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyPhongTro.models
 {
+    [Serializable]
     class Phong
     {
         private string m_maphong;
