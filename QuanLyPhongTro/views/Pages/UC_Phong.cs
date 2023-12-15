@@ -19,6 +19,7 @@ namespace QuanLyPhongTro.views.Pages
             xuLy.create(new Phong("101", 100, 50, true));
             xuLy.create(new Phong("102", 120, 60, false));
             xuLy.create(new Phong("103", 150, 70, true));
+            dgvHienThi.AutoGenerateColumns = false;
             xuLy.DisplayOnDataGridView(dgvHienThi);
         }
 
@@ -64,11 +65,21 @@ namespace QuanLyPhongTro.views.Pages
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-            if(txtSearch.Text != "")
+            if (txtSearch.Text != "")
             {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = xuLy.getAll().Where(p => p.Maphong.Contains(txtSearch.Text));
                 dgvHienThi.DataSource = bs;
+            }
+        }
+
+        private void dgvHienThi_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvHienThi.SelectedRows.Count > 0)
+            {
+                Phong P = xuLy.getAll().Find(ph => ph.Maphong == dgvHienThi.SelectedRows[0].Cells[0].Value.ToString());
+                frmThongTinKhacThue frm = new frmThongTinKhacThue(P);
+                frm.ShowDialog();
             }
         }
     }
