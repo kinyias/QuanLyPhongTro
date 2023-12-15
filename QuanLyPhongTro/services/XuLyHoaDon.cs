@@ -10,6 +10,10 @@ namespace QuanLyPhongTro.services
     [Serializable]
     internal class XuLyHoaDon : IServices<HoaDon>
     {
+        public XuLyHoaDon()
+        {
+           
+        }
         public void create(HoaDon entity)
         {
             throw new NotImplementedException();
