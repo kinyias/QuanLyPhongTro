@@ -64,7 +64,19 @@ namespace QuanLyPhongTro.services
             }
             return;
         }
-        public void update(Phong entity)
+
+        public void updateTrangThai(string maPhong, bool trangthai)
+        {
+            Phong p = List.Find(ph => ph.Maphong == maPhong);
+            if (p != null)
+            {
+                p.BooleanTrangThai = trangthai;
+                return;
+            }
+            return;
+        }
+
+        public void update(string id, Phong entity)
         {
             throw new NotImplementedException();
         }

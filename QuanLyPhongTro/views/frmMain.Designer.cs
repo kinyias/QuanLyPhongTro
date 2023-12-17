@@ -78,9 +78,10 @@
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel1.Size = new Size(260, 745);
+            guna2Panel1.Size = new Size(228, 559);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Button2
@@ -97,13 +98,14 @@
             guna2Button2.Image = Properties.Resources.icons8_customer_643;
             guna2Button2.ImageAlign = HorizontalAlignment.Right;
             guna2Button2.ImageOffset = new Point(3, 0);
-            guna2Button2.Location = new Point(29, 230);
-            guna2Button2.Margin = new Padding(3, 3, 3, 10);
+            guna2Button2.Location = new Point(25, 172);
+            guna2Button2.Margin = new Padding(3, 2, 3, 8);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(189, 59);
+            guna2Button2.Size = new Size(165, 44);
             guna2Button2.TabIndex = 2;
             guna2Button2.Text = "Khách thuê";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // btnPhong
             // 
@@ -120,12 +122,12 @@
             btnPhong.Image = Properties.Resources.icons8_room_501;
             btnPhong.ImageAlign = HorizontalAlignment.Right;
             btnPhong.ImageOffset = new Point(3, 0);
-            btnPhong.Location = new Point(29, 158);
-            btnPhong.Margin = new Padding(3, 3, 3, 10);
+            btnPhong.Location = new Point(25, 118);
+            btnPhong.Margin = new Padding(3, 2, 3, 8);
             btnPhong.Name = "btnPhong";
             btnPhong.PressedColor = Color.White;
             btnPhong.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPhong.Size = new Size(189, 59);
+            btnPhong.Size = new Size(165, 44);
             btnPhong.TabIndex = 1;
             btnPhong.Text = "Phong";
             btnPhong.Click += btnPhong_Click;
@@ -137,18 +139,20 @@
             guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Dock = DockStyle.Top;
             guna2Panel2.Location = new Point(0, 0);
+            guna2Panel2.Margin = new Padding(3, 2, 3, 2);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel2.Size = new Size(260, 132);
+            guna2Panel2.Size = new Size(228, 99);
             guna2Panel2.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe Script", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            guna2HtmlLabel1.Location = new Point(98, 49);
+            guna2HtmlLabel1.Location = new Point(86, 37);
+            guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(65, 35);
+            guna2HtmlLabel1.Size = new Size(53, 29);
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "LOGO";
             // 
@@ -158,20 +162,22 @@
             pnlContainer.Controls.Add(panelTop);
             pnlContainer.CustomizableEdges = customizableEdges19;
             pnlContainer.Dock = DockStyle.Right;
-            pnlContainer.Location = new Point(257, 0);
+            pnlContainer.Location = new Point(225, 0);
+            pnlContainer.Margin = new Padding(3, 2, 3, 2);
             pnlContainer.Name = "pnlContainer";
             pnlContainer.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            pnlContainer.Size = new Size(1029, 745);
+            pnlContainer.Size = new Size(900, 559);
             pnlContainer.TabIndex = 1;
             // 
             // pnlPages
             // 
             pnlPages.CustomizableEdges = customizableEdges9;
             pnlPages.Dock = DockStyle.Fill;
-            pnlPages.Location = new Point(0, 41);
+            pnlPages.Location = new Point(0, 31);
+            pnlPages.Margin = new Padding(3, 2, 3, 2);
             pnlPages.Name = "pnlPages";
             pnlPages.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            pnlPages.Size = new Size(1029, 704);
+            pnlPages.Size = new Size(900, 528);
             pnlPages.TabIndex = 3;
             // 
             // panelTop
@@ -183,9 +189,10 @@
             panelTop.CustomizableEdges = customizableEdges17;
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(3, 2, 3, 2);
             panelTop.Name = "panelTop";
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            panelTop.Size = new Size(1029, 41);
+            panelTop.Size = new Size(900, 31);
             panelTop.TabIndex = 2;
             // 
             // guna2Button4
@@ -200,10 +207,11 @@
             guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.Location = new Point(896, 5);
+            guna2Button4.Location = new Point(784, 4);
+            guna2Button4.Margin = new Padding(3, 2, 3, 2);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button4.Size = new Size(34, 33);
+            guna2Button4.Size = new Size(30, 25);
             guna2Button4.TabIndex = 2;
             // 
             // btnMinimize
@@ -217,10 +225,11 @@
             btnMinimize.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnMinimize.ForeColor = Color.White;
             btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
-            btnMinimize.Location = new Point(936, 5);
+            btnMinimize.Location = new Point(819, 4);
+            btnMinimize.Margin = new Padding(3, 2, 3, 2);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnMinimize.Size = new Size(34, 33);
+            btnMinimize.Size = new Size(30, 25);
             btnMinimize.TabIndex = 1;
             btnMinimize.Click += btnMinimize_Click;
             // 
@@ -235,10 +244,11 @@
             btnCanle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnCanle.ForeColor = Color.White;
             btnCanle.Image = Properties.Resources.icons8_cancel_50;
-            btnCanle.Location = new Point(976, 5);
+            btnCanle.Location = new Point(854, 4);
+            btnCanle.Margin = new Padding(3, 2, 3, 2);
             btnCanle.Name = "btnCanle";
             btnCanle.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnCanle.Size = new Size(34, 33);
+            btnCanle.Size = new Size(30, 25);
             btnCanle.TabIndex = 0;
             btnCanle.Click += btnCanle_Click;
             // 
@@ -259,14 +269,16 @@
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1286, 745);
+            ClientSize = new Size(1125, 559);
             Controls.Add(pnlContainer);
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmMain";
             Text = "frmMain";
+            Load += frmMain_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
             guna2Panel2.PerformLayout();

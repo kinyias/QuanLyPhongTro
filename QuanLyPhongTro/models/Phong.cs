@@ -39,5 +39,10 @@ namespace QuanLyPhongTro.models
             } }
 
         public bool BooleanTrangThai { get => m_booleanTrangThai; set => m_booleanTrangThai = value; }
+
+        public override string ToString()
+        {
+            return Maphong;
+        }
     }
 }

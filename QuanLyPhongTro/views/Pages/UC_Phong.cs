@@ -1,6 +1,8 @@
 ﻿using QuanLyPhongTro.models;
 using QuanLyPhongTro.services;
+using System;
 using System.Data;
+using System.Net.NetworkInformation;
 
 namespace QuanLyPhongTro.views.Pages
 {
@@ -75,11 +77,19 @@ namespace QuanLyPhongTro.views.Pages
 
         private void dgvHienThi_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgvHienThi.SelectedRows.Count > 0)
+            if (dgvHienThi.SelectedRows.Count > 0)
             {
                 Phong P = xuLy.getAll().Find(ph => ph.Maphong == dgvHienThi.SelectedRows[0].Cells[0].Value.ToString());
-                frmThongTinKhacThue frm = new frmThongTinKhacThue(P);
-                frm.ShowDialog();
+                if (P.Trangthai == "Phòng trống")
+                {
+                    frmThongTinKhacThue frm = new frmThongTinKhacThue(P);
+                    frm.ShowDialog();
+                }
+                else
+                {   
+                    guna2MessageDialog1.Show();
+                }
+                dgvHienThi.ClearSelection();
             }
         }
     }

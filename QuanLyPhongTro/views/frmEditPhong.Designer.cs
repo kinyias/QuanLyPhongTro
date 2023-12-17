@@ -61,10 +61,11 @@
             guna2Panel1.Controls.Add(btnLuu);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = DockStyle.Bottom;
-            guna2Panel1.Location = new Point(0, 291);
+            guna2Panel1.Location = new Point(0, 218);
+            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(506, 67);
+            guna2Panel1.Size = new Size(443, 50);
             guna2Panel1.TabIndex = 17;
             // 
             // btnLuu
@@ -77,10 +78,11 @@
             btnLuu.FillColor = Color.FromArgb(103, 183, 181);
             btnLuu.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(179, 8);
+            btnLuu.Location = new Point(157, 2);
+            btnLuu.Margin = new Padding(3, 2, 3, 2);
             btnLuu.Name = "btnLuu";
             btnLuu.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLuu.Size = new Size(173, 56);
+            btnLuu.Size = new Size(151, 42);
             btnLuu.TabIndex = 0;
             btnLuu.Text = "Lưu";
             btnLuu.Click += btnLuu_Click;
@@ -93,18 +95,19 @@
             panelTop.CustomizableEdges = customizableEdges7;
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(3, 2, 3, 2);
             panelTop.Name = "panelTop";
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            panelTop.Size = new Size(506, 41);
+            panelTop.Size = new Size(443, 31);
             panelTop.TabIndex = 18;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(12, 9);
+            label4.Location = new Point(10, 7);
             label4.Name = "label4";
-            label4.Size = new Size(218, 23);
+            label4.Size = new Size(178, 19);
             label4.TabIndex = 1;
             label4.Text = "Chỉnh sửa thông tin phòng";
             // 
@@ -119,10 +122,11 @@
             btnCanle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnCanle.ForeColor = Color.White;
             btnCanle.Image = Properties.Resources.icons8_cancel_50;
-            btnCanle.Location = new Point(467, 5);
+            btnCanle.Location = new Point(410, 0);
+            btnCanle.Margin = new Padding(3, 2, 3, 2);
             btnCanle.Name = "btnCanle";
             btnCanle.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnCanle.Size = new Size(34, 33);
+            btnCanle.Size = new Size(30, 25);
             btnCanle.TabIndex = 0;
             btnCanle.Click += btnCanle_Click;
             // 
@@ -146,27 +150,28 @@
             cbbMaPhong.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             cbbMaPhong.ForeColor = Color.FromArgb(68, 88, 112);
             cbbMaPhong.ItemHeight = 30;
-            cbbMaPhong.Location = new Point(169, 113);
+            cbbMaPhong.Location = new Point(148, 85);
+            cbbMaPhong.Margin = new Padding(3, 2, 3, 2);
             cbbMaPhong.Name = "cbbMaPhong";
             cbbMaPhong.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cbbMaPhong.Size = new Size(262, 36);
+            cbbMaPhong.Size = new Size(230, 36);
             cbbMaPhong.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(60, 120);
+            label1.Location = new Point(52, 90);
             label1.Name = "label1";
-            label1.Size = new Size(80, 20);
+            label1.Size = new Size(65, 15);
             label1.TabIndex = 20;
             label1.Text = "Mã phòng:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(60, 164);
+            label2.Location = new Point(52, 123);
             label2.Name = "label2";
-            label2.Size = new Size(97, 20);
+            label2.Size = new Size(77, 15);
             label2.TabIndex = 21;
             label2.Text = "Giá tiền mới :";
             // 
@@ -181,13 +186,14 @@
             txtGiaTien.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtGiaTien.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtGiaTien.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtGiaTien.Location = new Point(169, 155);
+            txtGiaTien.Location = new Point(148, 116);
+            txtGiaTien.Margin = new Padding(3, 2, 3, 2);
             txtGiaTien.Name = "txtGiaTien";
             txtGiaTien.PasswordChar = '\0';
             txtGiaTien.PlaceholderText = "";
             txtGiaTien.SelectedText = "";
             txtGiaTien.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtGiaTien.Size = new Size(262, 37);
+            txtGiaTien.Size = new Size(229, 28);
             txtGiaTien.TabIndex = 22;
             // 
             // guna2DragControl1
@@ -198,9 +204,9 @@
             // 
             // frmEditPhong
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(506, 358);
+            ClientSize = new Size(443, 268);
             Controls.Add(txtGiaTien);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -208,6 +214,7 @@
             Controls.Add(guna2Panel1);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmEditPhong";
             StartPosition = FormStartPosition.CenterParent;
             Text = "frmEditPhong";

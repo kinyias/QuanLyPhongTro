@@ -12,18 +12,20 @@ using System.Windows.Forms;
 
 namespace QuanLyPhongTro.views
 {
-    public partial class frmThongTinKhacThue : Form
+    public partial class frmAddKhachThue : Form
     {
-        XuLyKhachHang xuLy;
-        Phong p;
-        public frmThongTinKhacThue(Phong phong)
+        XuLyKhachHang xuLyKH;
+        XuLyPhong xuLyPhong;
+        XuLyHoaDon xuLyHD;
+        public frmAddKhachThue()
         {
             InitializeComponent();
-            xuLy = new XuLyKhachHang();
-            p = phong;
+            xuLyKH = new XuLyKhachHang();
+            xuLyPhong = new XuLyPhong();
+            xuLyHD = new XuLyHoaDon();
         }
 
-        private void btnCanle_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             MessageBoxGuna.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
             MessageBoxGuna.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OKCancel;
@@ -34,15 +36,16 @@ namespace QuanLyPhongTro.views
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            if(txtMaKhachHang.Text != "" && txtHoTen.Text != "" & txtQueQuan.Text != "" & txtSdt.Text != "")
+            if (txtMaKhachHang.Text != "" && txtHoTen.Text != "" & txtQueQuan.Text != "" & txtSdt.Text != "")
             {
                 try
                 {
                     KhachHang kh = new KhachHang(txtMaKhachHang.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
-                    p.BooleanTrangThai = false;
-                    xuLy.create(kh);
+                    xuLyHD.create(new HoaDon(xuLyHD.getAll().Count.ToString(), txtMaKhachHang.Text, 0, 0, cmbMaPhong.Text));
+                    xuLyKH.create(kh);
+                    xuLyPhong.updateTrangThai(cmbMaPhong.Text, false);
                     this.Close();
                 }
                 catch
@@ -54,6 +57,18 @@ namespace QuanLyPhongTro.views
             {
                 MessageBoxGuna.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
                 MessageBoxGuna.Show("Vui lòng điền đầy đủ thông tin", "Error");
+            }
+        }
+
+        private void frmAddKhachThue_Load(object sender, EventArgs e)
+        {
+            if (xuLyPhong.getAll().Count > 0)
+            {
+                List<Phong> listPhong = xuLyPhong.getAll().Where(p => p.BooleanTrangThai).ToList();
+                foreach (Phong phong in listPhong)
+                {
+                    cmbMaPhong.Items.Add(phong);
+                }
             }
         }
     }

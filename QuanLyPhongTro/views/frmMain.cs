@@ -46,5 +46,17 @@ namespace QuanLyPhongTro.views
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            UC_Phong uc = new UC_Phong();
+            AddUserControl(uc);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            UC_KhangHang uc = new UC_KhangHang();
+            AddUserControl(uc);
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace QuanLyPhongTro.models
 {
     [Serializable]
-    class KhachHang
+    public class KhachHang
     {
         private string m_makhach;
         private string m_hoten;
@@ -17,7 +17,7 @@ namespace QuanLyPhongTro.models
         private string m_sdt;
         private DateTime m_ngaythue;
         private DateTime m_ngayketthuc;
-        KhachHang()
+        public KhachHang()
         {
             m_makhach = string.Empty;
             m_hoten = string.Empty;
@@ -27,7 +27,7 @@ namespace QuanLyPhongTro.models
             m_ngaythue = DateTime.Now;
             m_ngayketthuc = DateTime.Now;
         }
-        KhachHang(string makhach, string hoten, DateTime ngaysinh, string quequan, string sdt, DateTime ngaythue, DateTime ngayketthuc)
+        public KhachHang(string makhach, string hoten, DateTime ngaysinh, string quequan, string sdt, DateTime ngaythue, DateTime ngayketthuc)
         {
             m_makhach = makhach;
             m_hoten = hoten;
