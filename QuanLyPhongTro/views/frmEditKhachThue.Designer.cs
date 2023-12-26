@@ -159,6 +159,7 @@
             dtpNgayThue.Size = new Size(219, 36);
             dtpNgayThue.TabIndex = 48;
             dtpNgayThue.Value = new DateTime(2023, 12, 17, 18, 13, 49, 725);
+            dtpNgayThue.ValueChanged += dtpNgayThue_ValueChanged;
             // 
             // dtpNgaySinh
             // 

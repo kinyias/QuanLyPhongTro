@@ -71,5 +71,13 @@ namespace QuanLyPhongTro.views
                 }
             }
         }
+
+        private void dtpNgayThue_ValueChanged(object sender, EventArgs e)
+        {
+            if(DateTime.Compare(dtpNgayThue.Value, dtpNgayKetThuc.Value) > 0)
+            {
+                dtpNgayKetThuc.Value = dtpNgayThue.Value;
+            }
+        }
     }
 }

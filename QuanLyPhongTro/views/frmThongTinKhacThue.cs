@@ -38,7 +38,7 @@ namespace QuanLyPhongTro.views
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtMaKhachHang.Text != "" && txtHoTen.Text != "" & txtQueQuan.Text != "" & txtSdt.Text != "")
+            if (txtMaKhachHang.Text != "" && txtHoTen.Text != "" & txtQueQuan.Text != "" & txtSdt.Text != "")
             {
                 try
                 {
@@ -57,6 +57,14 @@ namespace QuanLyPhongTro.views
             {
                 MessageBoxGuna.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
                 MessageBoxGuna.Show("Vui lòng điền đầy đủ thông tin", "Error");
+            }
+        }
+
+        private void dtpNgayThue_ValueChanged(object sender, EventArgs e)
+        {
+            if (DateTime.Compare(dtpNgayThue.Value, dtpNgayKetThuc.Value) > 0)
+            {
+                dtpNgayKetThuc.Value = dtpNgayThue.Value;
             }
         }
     }
