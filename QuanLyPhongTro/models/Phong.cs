@@ -18,7 +18,7 @@ namespace QuanLyPhongTro.models
             m_maphong = string.Empty;
             m_giaphong = 0;
             m_dientich = 0;
-            m_booleanTrangThai = false;
+            m_booleanTrangThai = true;
         }
         public Phong(string maphong, double giaphong, double dientich,bool booleanTrangThai)
         {

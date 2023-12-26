@@ -14,12 +14,14 @@ namespace QuanLyPhongTro.views
 {
     public partial class frmThongTinKhacThue : Form
     {
-        XuLyKhachHang xuLy;
+        XuLyKhachHang xuLyKH;
+        XuLyHoaDon xuLyHD;
         Phong p;
         public frmThongTinKhacThue(Phong phong)
         {
             InitializeComponent();
-            xuLy = new XuLyKhachHang();
+            xuLyKH = new XuLyKhachHang();
+            xuLyHD = new XuLyHoaDon();
             p = phong;
         }
 
@@ -42,7 +44,8 @@ namespace QuanLyPhongTro.views
                 {
                     KhachHang kh = new KhachHang(txtMaKhachHang.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
                     p.BooleanTrangThai = false;
-                    xuLy.create(kh);
+                    xuLyHD.create(new HoaDon(xuLyHD.getAll().Count.ToString(), kh.Makhach, 0, 0, p.Maphong, false));
+                    xuLyKH.create(kh);
                     this.Close();
                 }
                 catch

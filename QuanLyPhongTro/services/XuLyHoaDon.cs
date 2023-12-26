@@ -57,7 +57,20 @@ namespace QuanLyPhongTro.services
 
         public void update(string id, HoaDon entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                return;
+            HoaDon hd = List.Find(hd => hd.Mahoadon == entity.Mahoadon);
+            if (hd != null)
+            {
+                hd.Mahoadon = entity.Mahoadon;
+                hd.Makhachhang = entity.Makhachhang;
+                hd.Tiendien = entity.Tiendien;
+                hd.Tiennuoc = entity.Tiennuoc;
+                hd.Maphong = entity.Maphong;
+                hd.BooleanTrangThai = entity.BooleanTrangThai;
+                return;
+            }
+            return;
         }
     }
 }

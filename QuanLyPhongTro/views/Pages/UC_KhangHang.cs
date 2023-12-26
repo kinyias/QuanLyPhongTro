@@ -39,9 +39,6 @@ namespace QuanLyPhongTro.views.Pages
 
         private void UC_KhangHang_Load(object sender, EventArgs e)
         {
-            xuLyKH.create(new KhachHang("101", "Nguyen Van A", DateTime.Now, "1 duong so 1 quan 1 TP HCM", "0912345678", DateTime.Now, DateTime.Now));
-            xuLyKH.create(new KhachHang("102", "Nguyen Van B", DateTime.Now, "2 duong so 2 quan 3 TP HCM", "0912345678", DateTime.Now, DateTime.Now));
-            xuLyKH.create(new KhachHang("103", "Nguyen Van C", DateTime.Now, "3 duong so 3 quan 3 TP HCM", "0912345678", DateTime.Now, DateTime.Now));
             dgvHienThi.AutoGenerateColumns = false;
             xuLyKH.DisplayOnDataGridView(dgvHienThi);
         }
@@ -63,10 +60,21 @@ namespace QuanLyPhongTro.views.Pages
             {
                 KhachHang kh = xuLyKH.getAll().Find(ph => ph.Makhach == dgvHienThi.SelectedRows[0].Cells[0].Value.ToString());
                 HoaDon hd = xuLyHD.getAll().Find(h => h.Makhachhang.Contains(kh.Makhach));
+                if (hd != null)
+                {
                 xuLyPhong.updateTrangThai(hd.Maphong, true);
+                xuLyHD.delete(hd);
+                }
                 xuLyKH.delete(kh);
                 xuLyKH.DisplayOnDataGridView(dgvHienThi);
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+                BindingSource bs = new BindingSource();
+                bs.DataSource = xuLyKH.getAll().Where(p => p.Hoten.Contains(txtSearch.Text));
+                dgvHienThi.DataSource = bs;
         }
     }
 }

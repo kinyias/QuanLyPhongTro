@@ -18,9 +18,6 @@ namespace QuanLyPhongTro.views.Pages
         private void UC_Phong_Load(object sender, EventArgs e)
         {
             xuLy = new XuLyPhong();
-            xuLy.create(new Phong("101", 100, 50, true));
-            xuLy.create(new Phong("102", 120, 60, false));
-            xuLy.create(new Phong("103", 150, 70, true));
             dgvHienThi.AutoGenerateColumns = false;
             xuLy.DisplayOnDataGridView(dgvHienThi);
         }
@@ -77,6 +74,11 @@ namespace QuanLyPhongTro.views.Pages
 
         private void dgvHienThi_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dgvHienThi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             if (dgvHienThi.SelectedRows.Count > 0)
             {
                 Phong P = xuLy.getAll().Find(ph => ph.Maphong == dgvHienThi.SelectedRows[0].Cells[0].Value.ToString());
@@ -86,8 +88,8 @@ namespace QuanLyPhongTro.views.Pages
                     frm.ShowDialog();
                 }
                 else
-                {   
-                    guna2MessageDialog1.Show();
+                {
+                    MessageBox.Show(@"Phòng đã được thuê", @"Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 dgvHienThi.ClearSelection();
             }

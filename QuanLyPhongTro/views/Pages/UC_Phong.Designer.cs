@@ -141,6 +141,7 @@
             dgvHienThi.ThemeStyle.RowsStyle.Height = 40;
             dgvHienThi.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvHienThi.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvHienThi.CellClick += dgvHienThi_CellClick;
             dgvHienThi.RowEnter += dgvHienThi_RowEnter;
             // 
             // Column1

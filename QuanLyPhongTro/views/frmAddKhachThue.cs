@@ -43,7 +43,7 @@ namespace QuanLyPhongTro.views
                 try
                 {
                     KhachHang kh = new KhachHang(txtMaKhachHang.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
-                    xuLyHD.create(new HoaDon(xuLyHD.getAll().Count.ToString(), txtMaKhachHang.Text, 0, 0, cmbMaPhong.Text));
+                    xuLyHD.create(new HoaDon(xuLyHD.getAll().Count.ToString(), txtMaKhachHang.Text, 0, 0, cmbMaPhong.Text, false));
                     xuLyKH.create(kh);
                     xuLyPhong.updateTrangThai(cmbMaPhong.Text, false);
                     this.Close();

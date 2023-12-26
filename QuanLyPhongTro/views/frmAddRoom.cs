@@ -18,7 +18,7 @@ namespace QuanLyPhongTro.views.Pages
             {
                 try
                 {
-                    Phong p = new Phong(txtMaPhong.Text, double.Parse(txtTienPhong.Text), double.Parse(txtDienTichPhong.Text), rdrPhongTrong.Checked);
+                    Phong p = new Phong(txtMaPhong.Text, double.Parse(txtTienPhong.Text), double.Parse(txtDienTichPhong.Text), true);
                     xuLyPhong.create(p);
                     this.Close();
                 }
