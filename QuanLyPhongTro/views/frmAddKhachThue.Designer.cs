@@ -48,10 +48,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dtpNgayKetThuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtpNgayThue = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -74,6 +76,8 @@
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             label4 = new Label();
             panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            label10 = new Label();
+            txtSoNgayO = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             panelTop.SuspendLayout();
             SuspendLayout();
@@ -324,7 +328,7 @@
             btnThem.FillColor = Color.FromArgb(103, 183, 181);
             btnThem.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(320, 6);
+            btnThem.Location = new Point(320, 8);
             btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
             btnThem.ShadowDecoration.CustomizableEdges = customizableEdges18;
@@ -344,7 +348,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.CustomizableEdges = customizableEdges21;
+            btnCancel.CustomizableEdges = customizableEdges23;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -356,7 +360,7 @@
             btnCancel.Location = new Point(767, 4);
             btnCancel.Margin = new Padding(3, 2, 3, 2);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnCancel.Size = new Size(30, 25);
             btnCancel.TabIndex = 0;
             btnCancel.Click += btnCancel_Click;
@@ -376,20 +380,53 @@
             panelTop.BackColor = Color.FromArgb(103, 183, 181);
             panelTop.Controls.Add(label4);
             panelTop.Controls.Add(btnCancel);
-            panelTop.CustomizableEdges = customizableEdges23;
+            panelTop.CustomizableEdges = customizableEdges25;
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
             panelTop.Margin = new Padding(3, 2, 3, 2);
             panelTop.Name = "panelTop";
-            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges26;
             panelTop.Size = new Size(800, 31);
             panelTop.TabIndex = 10;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(36, 278);
+            label10.Name = "label10";
+            label10.Size = new Size(80, 15);
+            label10.TabIndex = 37;
+            label10.Text = "Số ngày ở trọ:";
+            // 
+            // txtSoNgayO
+            // 
+            txtSoNgayO.CustomizableEdges = customizableEdges21;
+            txtSoNgayO.DefaultText = "";
+            txtSoNgayO.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSoNgayO.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSoNgayO.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSoNgayO.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSoNgayO.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoNgayO.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoNgayO.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoNgayO.Location = new Point(150, 278);
+            txtSoNgayO.Margin = new Padding(3, 2, 3, 2);
+            txtSoNgayO.Name = "txtSoNgayO";
+            txtSoNgayO.PasswordChar = '\0';
+            txtSoNgayO.PlaceholderText = "";
+            txtSoNgayO.SelectedText = "";
+            txtSoNgayO.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtSoNgayO.Size = new Size(219, 22);
+            txtSoNgayO.TabIndex = 38;
+            txtSoNgayO.TextChanged += txtSoNgayO_TextChanged;
             // 
             // frmAddKhachThue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtSoNgayO);
+            Controls.Add(label10);
             Controls.Add(guna2Panel1);
             Controls.Add(cmbMaPhong);
             Controls.Add(label9);
@@ -444,5 +481,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelTop;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoNgayO;
+        private Label label10;
     }
 }

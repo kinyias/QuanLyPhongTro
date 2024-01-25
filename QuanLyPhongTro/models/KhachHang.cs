@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyPhongTro.views.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.AccessControl;
@@ -11,6 +12,7 @@ namespace QuanLyPhongTro.models
     public class KhachHang
     {
         private string m_makhach;
+        private string m_phong;
         private string m_hoten;
         private DateTime m_ngaysinh;
         private string m_quequan;
@@ -20,6 +22,7 @@ namespace QuanLyPhongTro.models
         public KhachHang()
         {
             m_makhach = string.Empty;
+            m_phong = string.Empty;
             m_hoten = string.Empty;
             m_ngaysinh = DateTime.Now;
             m_quequan = string.Empty;
@@ -27,9 +30,10 @@ namespace QuanLyPhongTro.models
             m_ngaythue = DateTime.Now;
             m_ngayketthuc = DateTime.Now;
         }
-        public KhachHang(string makhach, string hoten, DateTime ngaysinh, string quequan, string sdt, DateTime ngaythue, DateTime ngayketthuc)
+        public KhachHang(string makhach, string maphong, string hoten, DateTime ngaysinh, string quequan, string sdt, DateTime ngaythue, DateTime ngayketthuc)
         {
             m_makhach = makhach;
+            m_phong = maphong;
             m_hoten = hoten;
             m_ngaysinh = ngaysinh;
             m_quequan = quequan;
@@ -39,6 +43,7 @@ namespace QuanLyPhongTro.models
         }
 
         public string Makhach { get => m_makhach; set => m_makhach = value; }
+        public string Maphong { get => m_phong; set => m_phong = value; }
         public string Hoten { get => m_hoten; set => m_hoten = value; }
         public DateTime Ngaysinh { get => m_ngaysinh; set => m_ngaysinh = value; }
         public string Quequan { get => m_quequan; set => m_quequan = value; }

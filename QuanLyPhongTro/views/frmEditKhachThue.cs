@@ -33,7 +33,7 @@ namespace QuanLyPhongTro.views
             {
                 try
                 {
-                    KhachHang kh = new KhachHang(txtMaKhachHang.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
+                    KhachHang kh = new KhachHang(txtMaKhachHang.Text,cmbMaPhong.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
                     HoaDon hd = xuLyHD.getAll().Find(h => h.Makhachhang == khachHang.Makhach);
                     hd.Maphong = cmbMaPhong.Text;
                     xuLyPhong.updateTrangThai(hd.Maphong, false);

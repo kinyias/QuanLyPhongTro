@@ -43,13 +43,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             dgvHienThi = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Hoten = new DataGridViewTextBoxColumn();
-            Ngaysinh = new DataGridViewTextBoxColumn();
-            Quequan = new DataGridViewTextBoxColumn();
-            Sdt = new DataGridViewTextBoxColumn();
-            Ngaythue = new DataGridViewTextBoxColumn();
-            Ngayketthuc = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
@@ -57,6 +50,14 @@
             panel1 = new Panel();
             btnThemKH = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
+            Column1 = new DataGridViewTextBoxColumn();
+            Hoten = new DataGridViewTextBoxColumn();
+            Ngaysinh = new DataGridViewTextBoxColumn();
+            Quequan = new DataGridViewTextBoxColumn();
+            Sdt = new DataGridViewTextBoxColumn();
+            Ngaythue = new DataGridViewTextBoxColumn();
+            Ngayketthuc = new DataGridViewTextBoxColumn();
+            Maphong = new DataGridViewTextBoxColumn();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHienThi).BeginInit();
             panel2.SuspendLayout();
@@ -91,7 +92,7 @@
             dgvHienThi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvHienThi.ColumnHeadersHeight = 40;
             dgvHienThi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvHienThi.Columns.AddRange(new DataGridViewColumn[] { Column1, Hoten, Ngaysinh, Quequan, Sdt, Ngaythue, Ngayketthuc });
+            dgvHienThi.Columns.AddRange(new DataGridViewColumn[] { Column1, Hoten, Ngaysinh, Quequan, Sdt, Ngaythue, Ngayketthuc, Maphong });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -131,49 +132,6 @@
             dgvHienThi.ThemeStyle.RowsStyle.Height = 40;
             dgvHienThi.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvHienThi.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // Column1
-            // 
-            Column1.DataPropertyName = "MaKhach";
-            Column1.HeaderText = "#Id";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
-            // Hoten
-            // 
-            Hoten.DataPropertyName = "Hoten";
-            Hoten.HeaderText = "Họ Tên";
-            Hoten.Name = "Hoten";
-            // 
-            // Ngaysinh
-            // 
-            Ngaysinh.DataPropertyName = "Ngaysinh";
-            Ngaysinh.HeaderText = "Ngày sinh";
-            Ngaysinh.Name = "Ngaysinh";
-            // 
-            // Quequan
-            // 
-            Quequan.DataPropertyName = "Quequan";
-            Quequan.HeaderText = "Quê quán";
-            Quequan.Name = "Quequan";
-            // 
-            // Sdt
-            // 
-            Sdt.DataPropertyName = "Sdt";
-            Sdt.HeaderText = "SĐT";
-            Sdt.Name = "Sdt";
-            // 
-            // Ngaythue
-            // 
-            Ngaythue.DataPropertyName = "Ngaythue";
-            Ngaythue.HeaderText = "Ngày thuê";
-            Ngaythue.Name = "Ngaythue";
-            // 
-            // Ngayketthuc
-            // 
-            Ngayketthuc.DataPropertyName = "Ngayketthuc";
-            Ngayketthuc.HeaderText = "Ngày kêt thúc";
-            Ngayketthuc.Name = "Ngayketthuc";
             // 
             // panel2
             // 
@@ -294,6 +252,55 @@
             label1.TabIndex = 0;
             label1.Text = "Danh sách khách hàng";
             // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "MaKhach";
+            Column1.HeaderText = "#Id";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            // 
+            // Hoten
+            // 
+            Hoten.DataPropertyName = "Hoten";
+            Hoten.HeaderText = "Họ Tên";
+            Hoten.Name = "Hoten";
+            // 
+            // Ngaysinh
+            // 
+            Ngaysinh.DataPropertyName = "Ngaysinh";
+            Ngaysinh.HeaderText = "Ngày sinh";
+            Ngaysinh.Name = "Ngaysinh";
+            // 
+            // Quequan
+            // 
+            Quequan.DataPropertyName = "Quequan";
+            Quequan.HeaderText = "Quê quán";
+            Quequan.Name = "Quequan";
+            // 
+            // Sdt
+            // 
+            Sdt.DataPropertyName = "Sdt";
+            Sdt.HeaderText = "SĐT";
+            Sdt.Name = "Sdt";
+            // 
+            // Ngaythue
+            // 
+            Ngaythue.DataPropertyName = "Ngaythue";
+            Ngaythue.HeaderText = "Ngày thuê";
+            Ngaythue.Name = "Ngaythue";
+            // 
+            // Ngayketthuc
+            // 
+            Ngayketthuc.DataPropertyName = "Ngayketthuc";
+            Ngayketthuc.HeaderText = "Ngày kêt thúc";
+            Ngayketthuc.Name = "Ngayketthuc";
+            // 
+            // Maphong
+            // 
+            Maphong.DataPropertyName = "Maphong";
+            Maphong.HeaderText = "Mã Phòng";
+            Maphong.Name = "Maphong";
+            // 
             // UC_KhangHang
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -328,5 +335,6 @@
         private DataGridViewTextBoxColumn Sdt;
         private DataGridViewTextBoxColumn Ngaythue;
         private DataGridViewTextBoxColumn Ngayketthuc;
+        private DataGridViewTextBoxColumn Maphong;
     }
 }

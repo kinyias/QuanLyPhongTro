@@ -43,6 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -69,6 +71,8 @@
             dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtpNgayThue = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtpNgayKetThuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            label7 = new Label();
+            txtSoNgayO = new Guna.UI2.WinForms.Guna2TextBox();
             panelTop.SuspendLayout();
             SuspendLayout();
             // 
@@ -299,7 +303,7 @@
             // dtpNgaySinh
             // 
             dtpNgaySinh.Checked = true;
-            dtpNgaySinh.CustomizableEdges = customizableEdges19;
+            dtpNgaySinh.CustomizableEdges = customizableEdges21;
             dtpNgaySinh.FillColor = Color.White;
             dtpNgaySinh.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtpNgaySinh.Format = DateTimePickerFormat.Long;
@@ -307,7 +311,7 @@
             dtpNgaySinh.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpNgaySinh.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            dtpNgaySinh.ShadowDecoration.CustomizableEdges = customizableEdges22;
             dtpNgaySinh.Size = new Size(219, 36);
             dtpNgaySinh.TabIndex = 17;
             dtpNgaySinh.Value = new DateTime(2023, 12, 17, 18, 13, 49, 725);
@@ -315,7 +319,7 @@
             // dtpNgayThue
             // 
             dtpNgayThue.Checked = true;
-            dtpNgayThue.CustomizableEdges = customizableEdges17;
+            dtpNgayThue.CustomizableEdges = customizableEdges19;
             dtpNgayThue.FillColor = Color.White;
             dtpNgayThue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtpNgayThue.Format = DateTimePickerFormat.Long;
@@ -323,7 +327,7 @@
             dtpNgayThue.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpNgayThue.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpNgayThue.Name = "dtpNgayThue";
-            dtpNgayThue.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            dtpNgayThue.ShadowDecoration.CustomizableEdges = customizableEdges20;
             dtpNgayThue.Size = new Size(219, 36);
             dtpNgayThue.TabIndex = 18;
             dtpNgayThue.Value = new DateTime(2023, 12, 17, 18, 13, 49, 725);
@@ -332,7 +336,7 @@
             // dtpNgayKetThuc
             // 
             dtpNgayKetThuc.Checked = true;
-            dtpNgayKetThuc.CustomizableEdges = customizableEdges15;
+            dtpNgayKetThuc.CustomizableEdges = customizableEdges17;
             dtpNgayKetThuc.FillColor = Color.White;
             dtpNgayKetThuc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtpNgayKetThuc.Format = DateTimePickerFormat.Long;
@@ -340,16 +344,49 @@
             dtpNgayKetThuc.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpNgayKetThuc.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            dtpNgayKetThuc.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            dtpNgayKetThuc.ShadowDecoration.CustomizableEdges = customizableEdges18;
             dtpNgayKetThuc.Size = new Size(219, 36);
             dtpNgayKetThuc.TabIndex = 19;
             dtpNgayKetThuc.Value = new DateTime(2023, 12, 17, 18, 13, 49, 725);
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(29, 233);
+            label7.Name = "label7";
+            label7.Size = new Size(80, 15);
+            label7.TabIndex = 20;
+            label7.Text = "Số ngày ở trọ:";
+            // 
+            // txtSoNgayO
+            // 
+            txtSoNgayO.CustomizableEdges = customizableEdges15;
+            txtSoNgayO.DefaultText = "";
+            txtSoNgayO.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSoNgayO.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSoNgayO.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSoNgayO.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSoNgayO.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoNgayO.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoNgayO.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoNgayO.Location = new Point(144, 233);
+            txtSoNgayO.Margin = new Padding(3, 2, 3, 2);
+            txtSoNgayO.Name = "txtSoNgayO";
+            txtSoNgayO.PasswordChar = '\0';
+            txtSoNgayO.PlaceholderText = "";
+            txtSoNgayO.SelectedText = "";
+            txtSoNgayO.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtSoNgayO.Size = new Size(219, 22);
+            txtSoNgayO.TabIndex = 21;
+            txtSoNgayO.TextChanged += txtSoNgayO_TextChanged;
             // 
             // frmThongTinKhacThue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 463);
+            Controls.Add(txtSoNgayO);
+            Controls.Add(label7);
             Controls.Add(dtpNgayKetThuc);
             Controls.Add(dtpNgayThue);
             Controls.Add(dtpNgaySinh);
@@ -399,5 +436,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayKetThuc;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayThue;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaySinh;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoNgayO;
+        private Label label7;
     }
 }

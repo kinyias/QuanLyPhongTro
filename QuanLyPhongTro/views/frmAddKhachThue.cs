@@ -42,7 +42,7 @@ namespace QuanLyPhongTro.views
             {
                 try
                 {
-                    KhachHang kh = new KhachHang(txtMaKhachHang.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
+                    KhachHang kh = new KhachHang(txtMaKhachHang.Text, cmbMaPhong.Text, txtHoTen.Text, dtpNgaySinh.Value, txtQueQuan.Text, txtSdt.Text, dtpNgayThue.Value, dtpNgayKetThuc.Value);
                     xuLyHD.create(new HoaDon(xuLyHD.getAll().Count.ToString(), txtMaKhachHang.Text, 0, 0, cmbMaPhong.Text, false));
                     xuLyKH.create(kh);
                     xuLyPhong.updateTrangThai(cmbMaPhong.Text, false);
@@ -74,9 +74,17 @@ namespace QuanLyPhongTro.views
 
         private void dtpNgayThue_ValueChanged(object sender, EventArgs e)
         {
-            if(DateTime.Compare(dtpNgayThue.Value, dtpNgayKetThuc.Value) > 0)
+            if (DateTime.Compare(dtpNgayThue.Value, dtpNgayKetThuc.Value) > 0)
             {
                 dtpNgayKetThuc.Value = dtpNgayThue.Value;
+            }
+        }
+
+        private void txtSoNgayO_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSoNgayO.Text != "")
+            {
+                dtpNgayKetThuc.Value = dtpNgayKetThuc.Value.AddDays(Double.Parse(txtSoNgayO.Text));
             }
         }
     }
